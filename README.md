@@ -2,4 +2,4 @@
 
 ## Se realiza la conexión con una BD PostgreSQL
 
-## Se desarrolla mediante la arquitectura REST mediante la comunicacion de los metodos HTTP
+## Se desarrolla mediante la arquitectura REST usando comunicacion de los metodos HTTP
