@@ -18,7 +18,7 @@ public class DepartamentoService {
         return departamentoRepository.findAll();
     }
 
-    public Optional<Departamento> getById(int idDepto){
+    public Optional<Departamento> getById(String idDepto){
         return departamentoRepository.findById(idDepto);
     }
 

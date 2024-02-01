@@ -23,7 +23,7 @@ public class DepartamentoController {
     }
 
     @GetMapping("/{idDepto}")
-    public ResponseEntity<Departamento> departamentoById(@PathVariable("idDepto") int idDepto){
+    public ResponseEntity<Departamento> departamentoById(@PathVariable("idDepto") String idDepto){
         return departamentoService.getById(idDepto).map(departamento -> new ResponseEntity<>(departamento, HttpStatus.OK)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 

@@ -11,15 +11,15 @@ public class Municipio {
 
     @Id
     @Column(name = "idmunicipiousuarios")
-    private Integer idMunicipio;
+    private String idMunicipio;
 
     @Column(name = "nombre")
     private String nombre;
 
     @Column(name = "iddeptousuarios")
-    private Integer idDepto;
+    private String idDepto;
 
-    public Municipio(Integer idMunicipio, String nombre, Integer idDepto) {
+    public Municipio(String idMunicipio, String nombre, String idDepto) {
         this.idMunicipio = idMunicipio;
         this.nombre = nombre;
         this.idDepto = idDepto;
@@ -28,11 +28,11 @@ public class Municipio {
     public Municipio() {
     }
 
-    public Integer getIdMunicipio() {
+    public String getIdMunicipio() {
         return idMunicipio;
     }
 
-    public void setIdMunicipio(Integer idMunicipio) {
+    public void setIdMunicipio(String idMunicipio) {
         this.idMunicipio = idMunicipio;
     }
 
@@ -44,11 +44,11 @@ public class Municipio {
         this.nombre = nombre;
     }
 
-    public Integer getIdDepto() {
+    public String getIdDepto() {
         return idDepto;
     }
 
-    public void setIdDepto(Integer idDepto) {
+    public void setIdDepto(String idDepto) {
         this.idDepto = idDepto;
     }
 }

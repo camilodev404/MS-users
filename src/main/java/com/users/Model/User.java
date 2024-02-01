@@ -13,7 +13,7 @@ public class User {
 
     @Id
     @Column(name = "cedula")
-    private Integer cedula;
+    private String cedula;
 
     @Column(name = "tipodocumento")
     private String tipoDocumento;
@@ -114,7 +114,7 @@ public class User {
     public User() {
     }
 
-    public User(Integer cedula, String tipoDocumento, String correo, String password, String primerNombre, String primerApellido) {
+    public User(String cedula, String tipoDocumento, String correo, String password, String primerNombre, String primerApellido) {
         this.cedula = cedula;
         this.tipoDocumento = tipoDocumento;
         this.correo = correo;
@@ -123,11 +123,11 @@ public class User {
         this.primerApellido = primerApellido;
     }
 
-    public Integer getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(Integer cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 

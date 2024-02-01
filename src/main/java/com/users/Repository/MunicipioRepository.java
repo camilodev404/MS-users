@@ -9,9 +9,9 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface MunicipioRepository extends JpaRepository<Municipio, Integer> {
+public interface MunicipioRepository extends JpaRepository<Municipio, String> {
 
     @Query("SELECT m FROM Municipio m WHERE m.idDepto = :idDepto")
-    List<Municipio> findByDepto(@Param("idDepto") Integer idDepto);
+    List<Municipio> findByDepto(@Param("idDepto") String idDepto);
 
 }

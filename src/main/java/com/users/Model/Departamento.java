@@ -11,7 +11,7 @@ public class Departamento {
 
     @Id
     @Column(name = "iddeptousuarios")
-    private Integer idDepto;
+    private String idDepto;
 
     @Column(name = "nombre")
     private String nombre;
@@ -19,16 +19,16 @@ public class Departamento {
     public Departamento() {
     }
 
-    public Departamento(Integer idDepto, String nombre) {
+    public Departamento(String idDepto, String nombre) {
         this.idDepto = idDepto;
         this.nombre = nombre;
     }
 
-    public Integer getIdDepto() {
+    public String getIdDepto() {
         return idDepto;
     }
 
-    public void setIdDepto(Integer idDepto) {
+    public void setIdDepto(String idDepto) {
         this.idDepto = idDepto;
     }
 

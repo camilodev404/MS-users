@@ -23,13 +23,13 @@ public class MunicipioController {
     }
 
     @GetMapping("/depto/{idDepto}")
-    public ResponseEntity<List<Municipio>> getByDepto(@PathVariable("idDepto")int idDepto){
+    public ResponseEntity<List<Municipio>> getByDepto(@PathVariable("idDepto")String idDepto){
         List<Municipio> municipios = municipioService.getByDepto(idDepto);
         return new ResponseEntity<>(municipios, HttpStatus.OK);
     }
 
     @GetMapping("/{idMunicipio}")
-    public ResponseEntity<Municipio> municipioById(@PathVariable("idMunicipio") int idMunicipio){
+    public ResponseEntity<Municipio> municipioById(@PathVariable("idMunicipio") String idMunicipio){
         return municipioService.getById(idMunicipio).map(municipio -> new ResponseEntity<>(municipio, HttpStatus.OK)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 

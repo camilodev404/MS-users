@@ -23,7 +23,7 @@ public class UserController {
     }
 
     @GetMapping("/{cedula}")
-    public ResponseEntity<User> userById(@PathVariable("cedula") int cedula){
+    public ResponseEntity<User> userById(@PathVariable("cedula") String cedula){
         return userService.getById(cedula).map(user -> new ResponseEntity<>(user, HttpStatus.OK)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 

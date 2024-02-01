@@ -18,11 +18,11 @@ public class MunicipioService {
         return municipioRepository.findAll();
     }
 
-    public Optional<Municipio> getById(int idMunicipio){
+    public Optional<Municipio> getById(String idMunicipio){
         return municipioRepository.findById(idMunicipio);
     }
 
-    public List<Municipio> getByDepto(int idDepto){
+    public List<Municipio> getByDepto(String idDepto){
         return municipioRepository.findByDepto(idDepto);
     }
 
