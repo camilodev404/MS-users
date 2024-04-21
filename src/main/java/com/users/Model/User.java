@@ -73,7 +73,7 @@ public class User {
     private String direccion;
 
     @Column(name = "idmunicipiousuarios")
-    private Integer idMunicipio;
+    private String idMunicipio;
 
     @Column(name = "vereda")
     private String vereda;
@@ -283,11 +283,11 @@ public class User {
         this.direccion = direccion;
     }
 
-    public Integer getIdMunicipio() {
+    public String getIdMunicipio() {
         return idMunicipio;
     }
 
-    public void setIdMunicipio(Integer idMunicipio) {
+    public void setIdMunicipio(String idMunicipio) {
         this.idMunicipio = idMunicipio;
     }
 
